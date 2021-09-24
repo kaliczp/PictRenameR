@@ -6,7 +6,11 @@ filename <- scan("masolhoz.txt", character())
 raw.name1 <- 551:899
 form.name1 <- paste0("0",substr(raw.name1,1,2), "+", substr(raw.name1,3,3), "0.jpg")
 ## Hibás képek beírása
-joform.name1 <- c(form.name1[1:188],"Hibas73+90.jpg",form.name1[189:270],"Hibas82+10.jpg",form.name1[271:length(form.name1)])
+joform.name1 <- c(form.name1[1:188],
+                  "Hibas73+90.jpg",
+                  form.name1[189:270],
+                  "Hibas82+10.jpg",
+                  form.name1[271:length(form.name1)])
 ## Második adag -1, mert a 55+00 nincs benne
 raw.name2 <- seq.int(from = 1000, by = 1, length.out = length(filename)-1-length(joform.name1))
 ## Hibás képek beírása
