@@ -12,13 +12,15 @@ joform.name1 <- c(form.name1[1:188],
                   "Hibas82+10.jpg",
                   form.name1[271:length(form.name1)])
 ## Második adag -1, mert a 55+00 nincs benne
-raw.name2 <- seq.int(from = 1000, by = 1, length.out = length(filename)-1-length(joform.name1)-1)
+raw.name2 <- seq.int(from = 1000, by = 1, length.out = length(filename)-1-length(joform.name1)-2)
 ## Hibás képek beírása
 ## Plusz jel beleszuszakolása
 form.name2 <- paste0(substr(raw.name2,1,3), "+", substr(raw.name2,4,4), "0.jpg")
 joform.name2 <- c(form.name2[1:8],
                   "Hibas100+9.jpg",
-                  form.name2[9:length(form.name2)])
+                  form.name2[9:90],
+                  "Hibas109+0.jpg",
+                  form.name2[91:length(form.name2)])
 ## A kettő összerakása
 form.name <- c("055+00.jpg",joform.name2, joform.name1)
 ## Hibás kép jelölése
